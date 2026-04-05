@@ -39,8 +39,3 @@ jobs:
         with:
           name: rugged-emr-android
           path: build/app/outputs/flutter-apk/app-release.apk
-Fix YAML syntax
-
-
-
-          
