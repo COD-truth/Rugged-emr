@@ -13,9 +13,12 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.29.0'
-      - run: flutter pub get
-      - run: flutter build windows --release
-      - uses: actions/upload-artifact@v4
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Build Windows EXE
+        run: flutter build windows --release
+      - name: Upload Windows artifact
+        uses: actions/upload-artifact@v4
         with:
           name: rugged-emr-windows
           path: build/windows/x64/runner/Release/
@@ -27,15 +30,13 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.29.0'
-      - run: flutter pub get
-      - run: flutter build apk --release
-      - uses: actions/upload-artifact@v4
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Build Android APK
+        run: flutter build apk --release
+      - name: Upload Android artifact
+      Fix YAML syntax
+        uses: actions/upload-artifact@v4
         with:
           name: rugged-emr-android
           path: build/app/outputs/flutter-apk/app-release.apk
-Add build workflow
-
-
-
-
-          
