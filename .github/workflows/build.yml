@@ -33,7 +33,7 @@ jobs:
         with:
           name: rugged-emr-android
           path: build/app/outputs/flutter-apk/app-release.apk
-Add build workflow"
+Add build workflow
 
 
 
