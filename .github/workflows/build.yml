@@ -35,8 +35,12 @@ jobs:
       - name: Build Android APK
         run: flutter build apk --release
       - name: Upload Android artifact
-      Fix YAML syntax
         uses: actions/upload-artifact@v4
         with:
           name: rugged-emr-android
           path: build/app/outputs/flutter-apk/app-release.apk
+Fix YAML syntax
+
+
+
+          
